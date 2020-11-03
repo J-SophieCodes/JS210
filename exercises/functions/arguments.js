@@ -26,3 +26,14 @@ function myValue(a) {   // local variable argument created
 
 myValue(a);
 console.log(a);   // prints 7
+
+
+// part 3
+let a = [1, 2, 3];
+
+function myValue(b) { // local variable b references array 'a'
+  b[2] += 7;  // reassignment of array element is mutating
+}
+
+myValue(a); // array passed in to function as argument
+console.log(a); // prints [1, 2, 10]
